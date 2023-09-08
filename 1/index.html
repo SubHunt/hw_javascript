@@ -1,17 +1,9 @@
 <p>Loading, please wait...</p>
 <script>
-    // document.write('Hello, world!');
-    // console.log('Hello, developers!');
     let n = Math.floor(Math.random() * 1000);
     console.log(`Загаданное число ${n}`);
     let numberGamer = +prompt("Введите число от 0 до 1000");
     console.log(`Введенное игроком число ${numberGamer}`);
-    console.log(typeof(numberGamer));
-    console.log(isNaN(numberGamer));
-    console.log(numberGamer);
-    console.log(numberGamer > 0);
-    console.log(numberGamer < 1000);
-    console.log([0, 1000].includes(numberGamer));
     if ( (isNaN(numberGamer)) || (numberGamer > 1000 || numberGamer < 0) ) {
         alert("Неверный ввод. Нужно ввести число от 0 до 1000")
     } else if (n===numberGamer) {
@@ -21,6 +13,4 @@
     } else if (n > numberGamer) {
         alert("Вы не угадали. Введенное число меньше загаданного")
     }
-
-// || (![0,1000].includes(numberGamer))) 
 </script>
