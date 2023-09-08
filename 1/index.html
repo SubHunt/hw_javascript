@@ -2,15 +2,21 @@
 <script>
     let n = Math.floor(Math.random() * 1000);
     console.log(`Загаданное число ${n}`);
-    let numberGamer = +prompt("Введите число от 0 до 1000");
-    console.log(`Введенное игроком число ${numberGamer}`);
-    if ( (isNaN(numberGamer)) || (numberGamer > 1000 || numberGamer < 0) ) {
-        alert("Неверный ввод. Нужно ввести число от 0 до 1000")
-    } else if (n===numberGamer) {
-        alert("Вы угадали число, поздравляем!")
-    } else if (n < numberGamer) {
-        alert("Вы не угадали. Введенное число больше загаданного")
-    } else if (n > numberGamer) {
-        alert("Вы не угадали. Введенное число меньше загаданного")
+    let attempt = 3
+    while (attempt) {
+        alert(`У вас есть ${attempt} попытки, чтобы отгадать загаданное число`);
+        let numberGamer = +prompt("Введите число от 0 до 1000");
+        console.log(`Введенное игроком число ${numberGamer}`);
+        if ( (isNaN(numberGamer)) || (numberGamer > 1000 || numberGamer < 0) ) {
+            alert("Неверный ввод. Нужно ввести число от 0 до 1000")
+        } else if (n===numberGamer) {
+            alert("Вы угадали число, поздравляем!");
+            break;
+        } else if (n < numberGamer) {
+            alert("Вы не угадали. Введенное число больше загаданного")
+        } else if (n > numberGamer) {
+            alert("Вы не угадали. Введенное число меньше загаданного")
+        }
+        attempt --;
     }
 </script>
