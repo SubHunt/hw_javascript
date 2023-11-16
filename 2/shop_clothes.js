@@ -53,24 +53,23 @@ function Cart(good, amount) { //Object - constructor for cart
     this.amount = amount;
 }
 
+// create arrays
 // Our assortment
-const cap = new Item(1,"Cap", "Cotton cap",["M, L"], 2500, true);
-const jacket = new Item(2,"Jacket", "Windproof jacket",["S, M, L, XL"], 12500, true);
-const trousers = new Item(3,"Trousers", "Cotton trousers",["XS, S, M, L, XL, XXL"], 7500, true);
-const coat = new Item(4,"Coat", "Wool coat",["S, M, L, XL"], 22700, true);
-const shirt = new Item(5,"Shirt", "Cotton shirt",["S, M, L, XL"], 5300, true);
-const tShirt = new Item(6,"Dress", "Syntetic Dress",["XS, S, M, L"], 3100, true);
+const catalogue = [
+    new Item (1,"Cap", "Cotton cap",["M, L"], 2500, true),
+    new Item(2,"Jacket", "Windproof jacket",["S, M, L, XL"], 12500, true),
+    new Item(3,"Trousers", "Cotton trousers",["XS, S, M, L, XL, XXL"], 7500, true),
+    new Item(4,"Coat", "Wool coat",["S, M, L, XL"], 22700, true),
+    new Item(5,"Shirt", "Cotton shirt",["S, M, L, XL"], 5300, true),
+    new Item(6,"Dress", "Syntetic Dress",["XS, S, M, L"], 3100, true),
+];
 
 //Let's something add in cart yet
-const cart1 = new Cart ("Shirt", 5);
-const cart2 = new Cart ("Jacket", 2);
+let cart = [
+    new Cart ("Shirt", 5),
+    new Cart ("Jacket", 2),
+];
 
-// create arrays
-const catalogue = [];
-let cart = [];
-// add to arrays our objects
-catalogue.push(cap, jacket, trousers, coat, shirt, tShirt);
-cart.push(cart1, cart2);
 
 //Input data
 // console.log("Please learn goods from our catalogue:");
