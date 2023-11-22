@@ -18,23 +18,26 @@ async function getUserInput() {
     return await promise;
 }
 
-(async function guessNumber(){
-    let userNumber = await getUserInput();
-    if (userNumber < indendedNumber) {
-        rl.write(`Your number ${userNumber} is small! Try again! Your effort is ${attempt} \n`);
-    } else if (userNumber > indendedNumber) {
-        rl.write(`Your number ${userNumber} is big! Try again! Your effort is ${attempt} \n`);
-    } else if (userNumber === indendedNumber) {
-        rl.write(`You guess the Number! You use effort is ${attempt}`);
-        rl.close();
-        return;
-    } else {
-        rl.write(`Wrong enter! Please enter the number between 0...100. You use effort is ${attempt} \n`);
-    }
-    attempt++ ;
-    rl.pause;
-    guessNumber();
-    })();
-
+async function guessNumber(){
+    while (true){
+        let userNumber = await getUserInput();
+        if (userNumber < indendedNumber) {
+            rl.write(`Your number ${userNumber} is small! Try again! Your effort is ${attempt} \n`);
+        } else if (userNumber > indendedNumber) {
+            rl.write(`Your number ${userNumber} is big! Try again! Your effort is ${attempt} \n`);
+        } else if (userNumber === indendedNumber) {
+            rl.write(`You guess the Number! You use effort is ${attempt}`);
+            rl.close();
+            break;
+            // return;
+        } else {
+            rl.write(`Wrong enter! Please enter the number between 0...100. You use effort is ${attempt} \n`);
+        }
+        attempt++ ;
+        rl.pause;
+        // guessNumber();
+        };
+    };
+guessNumber();
 // Checked Random number
-// console.log(indendedNumber);
+console.log(indendedNumber);
