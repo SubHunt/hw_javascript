@@ -17,7 +17,7 @@
             alert('Вы выиграли');
             dead.textContent = 0;
             lost.textContent = 0;
-        } else if (lost.textContent >= 3){
+        } else if (lost.textContent >= 3) {
             alert('Вы проиграли');
             dead.textContent = 0;
             lost.textContent = 0;
