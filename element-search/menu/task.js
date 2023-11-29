@@ -16,7 +16,9 @@ arrLink.forEach((link) => {
             }) 
             //visible ON current submenu
             parent.querySelector('.menu_sub').classList.add('menu_active');
-        } 
+        } else {
+            parent.querySelector('.menu_sub').classList.remove('menu_active');
+        }
  
         if (link.closest('.menu_main')) {
 			return false

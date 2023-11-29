@@ -10,18 +10,6 @@ btnDanger.onclick = () => {
     popupSuccess.className = 'modal modal_active';
 }
 
-//First solution. Simple, but bad scalable
-// btnClose[0].onclick = () => {
-//     popupMain.className = 'modal';
-// }
-
-// btnClose[1].onclick = () => {
-//     // popupMain.className = 'modal'; //this popup close yet
-//     popupSuccess.className = 'modal';
-// }
-
-//Second solution. Little hard for understanding, but better scalable
-//register all events "X" and convert NodeList collection to array.
 const arrBtnClose = Array.from(btnClose)
 arrBtnClose.forEach((btn) => {
     btn.onclick = () => {
