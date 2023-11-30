@@ -4,10 +4,6 @@ const arrSliders = Array.from(document.getElementsByClassName("slider__item"));
 const qtySlides = arrSliders.length;
 let activeSlide;
 
-    //TO DO
-    // actSlide = arrSliders.findIndex(slide => slide.classList.contains('slider__item_active'));
-    // console.log(actSlide);
-
 function switchOnSlide(indexSlide) {
     arrSliders[indexSlide].className = 'slider__item slider__item_active';
     return indexSlide;
