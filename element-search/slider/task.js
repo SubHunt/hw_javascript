@@ -4,17 +4,22 @@ const arrSliders = Array.from(document.getElementsByClassName("slider__item"));
 const qtySlides = arrSliders.length;
 let activeSlide;
 
-function switchOnSlide(indexSlide=0) {
+    //TO DO
+    // actSlide = arrSliders.findIndex(slide => slide.classList.contains('slider__item_active'));
+    // console.log(actSlide);
+
+function switchOnSlide(indexSlide) {
     arrSliders[indexSlide].className = 'slider__item slider__item_active';
     return indexSlide;
 }
 
-function switchOffSlide(indexSlide=0) {
+function switchOffSlide(indexSlide) {
     arrSliders[indexSlide].className = 'slider__item';
     return indexSlide;
 }
 
 sliderNext.onclick = () => {
+    activeSlide = arrSliders.findIndex(slide => slide.classList.contains('slider__item_active'));
     activeSlide = switchOffSlide(activeSlide);
     activeSlide++;
     if (activeSlide >= qtySlides) {
@@ -24,6 +29,7 @@ sliderNext.onclick = () => {
 }
 
 sliderPrev.onclick = () => {
+    activeSlide = arrSliders.findIndex(slide => slide.classList.contains('slider__item_active'));
     activeSlide = switchOffSlide(activeSlide);
     activeSlide--;
     if (activeSlide < 0) {
