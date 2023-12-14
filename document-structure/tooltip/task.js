@@ -6,9 +6,11 @@ hasTooltip.forEach((element) => {
         // Disable all active tooltips
         const tooltipActive = document.getElementsByClassName('tooltip_active')[0];
         if (tooltipActive) {
-        tooltipActive.classList.remove('tooltip_active');
-            if (tooltipActive.textContent) return false;
-        }
+            tooltipActive.classList.remove('tooltip_active');
+            if (tooltipActive.textContent == element.title) {
+                return false;
+            };
+        };
         
         //Create HTML element with classes and title as need
         const tooltip = document.createElement('div');

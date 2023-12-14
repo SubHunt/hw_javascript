@@ -19,7 +19,7 @@ productQuantityControlInc.forEach((el, index) => {
 //Decrement qty
 productQuantityControlDec.forEach((el, index) => {
     el.addEventListener('click', () => {
-        if (productQuantityValue[index].textContent > 0) {
+        if (productQuantityValue[index].textContent > 1) {
             productQuantityValue[index].textContent --
         } else {
             return false;
